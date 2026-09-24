@@ -1,87 +1,66 @@
 {
-    "//0": "============================================================================",
-  "//about": "Cline MCP Settings (Template) — Model Context Protocol server configurations.",
-  "//instructions": "1. Copy this file to your project root or Cline settings directory. 2. Configure each server's paths to match your environment. 3. Install the required MCP server packages. 4. For more info: https://github.com/modelcontextprotocol/servers",
-  "//1": "============================================================================",
+  "//about": "Production-Grade MCP Configuration for Cline + Omniroute + OpenRouter",
+  "//docs": "https://github.com/modelcontextprotocol/servers",
 
   "mcpServers": {
-
     "filesystem": {
-      "//description": "Filesystem server — provides read/write/list access to specified directories.",
-      "//install": "Install: npm install -g @modelcontextprotocol/server-filesystem OR use via npx.",
-      "//note": "List all directories you want Cline to access. Use absolute paths.",
-      "command": "npx",
+      "description": "File operations for workspace directories",
+      "command": "cmd",
       "args": [
+        "/c",
+        "npx",
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/absolute/path/to/project1",
-        "/absolute/path/to/shared-resources"
+        "C:\\Users\\navee\\OneDrive\\Documents\\Code"
       ],
-      "env": {}
+      "disabled": false
+    },
+
+    "memory": {
+      "description": "Persistent knowledge graph for cross-session context - reduces token usage by storing project knowledge",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "C:\\Users\\navee\\OneDrive\\Documents\\Code\\Cline-StarterKit\\.cline\\memory.jsonl"
+      },
+      "disabled": false
+    },
+
+    "sequential-thinking": {
+      "description": "Structured problem-solving for complex tasks - improves reasoning quality",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false
     },
 
     "git": {
-      "//description": "Git server — provides git operations (status, log, diff, branch, commit).",
-      "//install": "Install via pip: pip install mcp-server-git  OR  via npx: npx -y @modelcontextprotocol/server-git",
-      "//note": "Update the --repository path to point to your git repository or use --cwd for current directory.",
+      "description": "Git operations without shell commands - more efficient than CLI",
       "command": "uvx",
       "args": [
         "mcp-server-git",
         "--repository",
-        "/absolute/path/to/your/repo"
+        "C:\\Users\\navee\\OneDrive\\Documents\\Code\\Cline-StarterKit"
       ],
-      "env": {}
+      "disabled": false
     },
 
     "fetch": {
-      "//description": "Fetch server — enables web page fetching so Cline can read URLs and web content.",
-      "//install": "Install: pip install mcp-server-fetch  OR  use via uvx: uvx mcp-server-fetch",
+      "description": "Web content fetching for documentation and API references",
       "command": "uvx",
       "args": [
         "mcp-server-fetch"
       ],
-      "env": {}
-    },
-
-    "brave-search": {
-      "//description": "Web search server — uses the Brave Search API to perform web searches.",
-      "//install": "Install: pip install mcp-brave-search  OR  use via uvx: uvx mcp-brave-search",
-      "//note": "Requires a BRAVE_API_KEY environment variable. Sign up at https://brave.com/search/api.",
-      "command": "uvx",
-      "args": [
-        "mcp-brave-search"
-      ],
-      "env": {
-        "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY_HERE"
-      }
-    },
-
-    "postgres": {
-      "//description": "PostgreSQL server — provides database access for querying tables, schemas, and data.",
-      "//install": "Install: pip install mcp-server-postgres  OR  use via uvx: uvx mcp-server-postgres",
-      "//note": "Update the connection string with your database credentials. Ensure network access.",
-      "command": "uvx",
-      "args": [
-        "mcp-server-postgres",
-        "--connection-string",
-        "postgresql://user:password@localhost:5432/dbname"
-      ],
-      "env": {}
-    },
-
-    "custom-server": {
-            "//description": "Placeholder for your custom MCP server.",
-      "//note": "Replace this entry with your actual server configuration.",
-      "//config_command": "command = executable or runtime (e.g., node, python, ./my-server)",
-      "//config_args": "args = arguments to pass to your server script",
-      "//config_env": "env = environment variables required by your server",
-      "command": "node",
-      "args": [
-        "/absolute/path/to/your/custom-server.js"
-      ],
-      "env": {
-        "CUSTOM_API_KEY": "your-key-here"
-      }
+      "disabled": false
     }
   }
 }

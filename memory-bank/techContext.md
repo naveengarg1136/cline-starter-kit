@@ -6,25 +6,12 @@
 
 ## Tech Stack
 
-```
-[List the primary technologies, languages, and frameworks.
-
- Example:
- - Language: TypeScript 5.x
- - Runtime: Node.js 20.x
- - Framework: Express.js
- - Database: PostgreSQL 15
- - Cache: Redis 7.x
- - Frontend: React 18 (Next.js — if applicable)
- - Testing: Jest, Supertest, Cypress
- - ORM: Prisma
- - Validation: Zod
- - Logging: Winston
- - Containerization: Docker, Docker Compose
- - CI/CD: GitHub Actions
- - Cloud: AWS (EC2, RDS, S3, CloudFront)
-]
-```
+- **AI Provider:** OpenRouter (multiple models via single API)
+- **Router:** Omniroute for intelligent model selection
+- **IDE:** VS Code with Cline extension
+- **MCP Servers:** filesystem, memory, sequential-thinking, git, fetch
+- **Language:** TypeScript 5.x
+- **Runtime:** Node.js 20.x
 
 ---
 

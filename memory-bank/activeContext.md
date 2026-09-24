@@ -6,78 +6,47 @@
 
 ## Current Focus
 
-```
-[What is the primary area of work right now?
- Example:
- "Building the user authentication module — implementing JWT-based login,
- registration, and password reset flows."
-]
-```
+Production-grade setup for Cline + Omniroute + OpenRouter with MCP servers, skills, and hooks for token efficiency.
 
 ---
 
 ## Recent Changes
 
-```
-- [2026-09-23] Added Output Discipline section to .clinerules/01-coding-standards.md (task-only replies, summarized logs, minimal patches)
-- [2026-09-23] Created .clinerules/00-core-protocol.md with Context Discipline rules (free API tier prompt-cap handling: no full-file pastes, use @ mentions, prefer diffs, /newtask on err_free_prompt_cap, /smol at >50% context)
-```
+- [2026-09-24] Created 7 skills: architect, commit-changes, quick-fix, code-review, api-design, debug, test-gen
+- [2026-09-24] Configured MCP servers: filesystem, memory, sequential-thinking, git, fetch
+- [2026-09-24] Updated .clinerules/00-memory-bank.md with MCP memory integration
+- [2026-09-23] Added Output Discipline section to .clinerules/01-coding-standards.md
+- [2026-09-23] Created .clinerules/00-core-protocol.md with Context Discipline rules
 
 ---
 
 ## Open Questions
 
-```
-[List any decisions or issues that need clarification.
-
- Example:
- - [Q] Should we use email or phone number for login?
- - [Q] Which SMS provider to use for notifications (Twilio vs. AWS SNS)?
- - [Q] Do we need social login (Google, GitHub)?
-]
+```markdown
+- [Q] Need to add BRAVE_API_KEY for web search capability?
+- [Q] Should we add postgres MCP server for database projects?
 ```
 
 ---
 
 ## Next Steps
 
-```
-[Immediate actions to take in the current or next session.
-
- Example:
- - Implement login endpoint with JWT token generation
- - Add middleware to verify JWT on protected routes
- - Set up test database (PostgreSQL in Docker)
- - Write unit tests for auth service
-]
-```
+- Test MCP servers are connected in Cline
+- Verify skills trigger correctly with slash commands
+- Add project-specific memory entities using MCP memory tools
 
 ---
 
 ## In Progress Tasks
 
-```
-[List tasks currently being worked on, with status.
-
- Example:
- - [IN PROGRESS] Design user schema and validation
- - [IN PROGRESS] Implement registration endpoint
- - [BLOCKED]   Login endpoint — waiting on JWT secret decision
- - [DONE]      Set up project structure and dependencies
-]
-```
+- [DONE] Production-grade MCP configuration
+- [DONE] Skills creation (7 skills)
+- [DONE] Memory bank integration
+- [TODO] Test the setup with real tasks
 
 ---
 
 ## Decisions Log
 
-```
-[Record key decisions as the project evolves.
-
- Format: [Date] Decision: [description] — Rationale: [why]
-
- Example:
- - [2024-06-09] Decision: Use PostgreSQL over Redis for session storage — Rationale: We need persistent relational data and ACID compliance.
- - [2024-06-09] Decision: Use Zod for input validation — Rationale: Type-safe, works seamlessly with TypeScript.
-]
-```
+- [2026-09-24] Decision: Use MCP memory server for persistent knowledge — Rationale: Reduces token usage by storing context across sessions
+- [2026-09-24] Decision: Use skills instead of rules for task-specific guidance — Rationale: Skills load on-demand, saving ~2000 tokens per inactive skill
