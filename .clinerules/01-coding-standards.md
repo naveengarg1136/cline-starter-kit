@@ -206,3 +206,12 @@ function processUser(user?: User): string {
 - Maintain consistent indentation (2 spaces for JS/TS, 4 spaces for Python).
 - Use semicolons in JavaScript/TypeScript (unless the project explicitly omits them with a formatter rule).
 - Use double quotes for strings (configurable, but be consistent).
+
+---
+
+## Output Discipline
+
+- Return only what completes the task. No long preambles or task restatements.
+- Summarize noisy output. Do not paste raw logs, full test outputs, or stack traces unless requested.
+- Prefer minimal patches over full-file rewrites.
+- When explaining, be concise. Code first, explanation second.

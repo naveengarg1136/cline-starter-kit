@@ -19,17 +19,8 @@
 ## Recent Changes
 
 ```
-[List the most recent changes to the project. Keep the last 5–10 items.
-
- Format: [Date] [Short description of change]
-
- Example:
- - [2024-06-10] Created user registration endpoint with Zod validation
- - [2024-06-10] Added PostgreSQL schema for users table
- - [2024-06-09] Set up Express server with CORS and rate limiting
- - [2024-06-09] Installed dependencies: express, zod, pg, jsonwebtoken
- - [2024-06-08] Initialized project repository via create-next-app
-]
+- [2026-09-23] Added Output Discipline section to .clinerules/01-coding-standards.md (task-only replies, summarized logs, minimal patches)
+- [2026-09-23] Created .clinerules/00-core-protocol.md with Context Discipline rules (free API tier prompt-cap handling: no full-file pastes, use @ mentions, prefer diffs, /newtask on err_free_prompt_cap, /smol at >50% context)
 ```
 
 ---
